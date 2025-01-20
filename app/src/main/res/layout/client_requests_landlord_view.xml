@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/circular_border"
+    android:backgroundTint="@color/lavenderblush"
+    android:orientation="horizontal"
+    android:padding="8dp">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/clientRequestName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Client Name"
+            android:textSize="11sp" />
+        <TextView
+            android:id="@+id/clientTypeOfRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Request Type"
+            android:textSize="11sp" />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acceptRequestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/tan"
+        android:padding="2dp"
+        android:text="Accept"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/rejectRequestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/tan"
+        android:padding="2dp"
+        android:text="Reject"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</LinearLayout>

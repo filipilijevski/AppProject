@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightskyblue"
+        android:orientation="vertical"
+        android:padding="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Past Property Details"
+            android:textAlignment="center"
+            android:textColor="@color/darkblue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/addressInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:hint="Address"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/typeInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:hint="Type"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/numberOfRoomsInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:hint="Number of Rooms"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/numberOfBathroomsInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:hint="Number of Bathrooms"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/numberOfFloorsInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:hint="Number of Floors"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/laundryInUnitSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circular_border"
+            android:backgroundTint="@color/lavenderblush"
+            android:paddingHorizontal="30dp"
+            android:text="Laundry in Unit"
+            android:textOff="No"
+            android:textOn="Yes"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/areaInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:hint="Area in Square Feet"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/parkingSpotsInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:hint="Number of Parking Spots"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/rentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:hint="Rent per Month ($)"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circular_border"
+            android:backgroundTint="@color/lavenderblush"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Utilities Included:"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+            <CheckBox
+                android:id="@+id/utilitiesIncludedHydro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Hydro"
+                android:textSize="12sp" />
+            <CheckBox
+                android:id="@+id/utilitiesIncludedHeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Heat"
+                android:textSize="12sp" />
+            <CheckBox
+                android:id="@+id/utilitiesIncludedWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Water"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/selectedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/selectImageButton"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Selected Image"
+            android:scaleType="centerCrop" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/closedTicketsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0.9"
+            android:background="@drawable/circular_border"
+            android:backgroundTint="@color/dodgerblue"
+            android:padding="10dp"
+            android:text="View Closed Tickets"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

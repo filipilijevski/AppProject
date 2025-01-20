@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgrey">
+    <LinearLayout
+        android:id="@+id/companyHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/lightgrey"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="1dp">
+        <ImageView
+            android:id="@+id/companyLogo"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:background="@color/lightgrey"
+            android:contentDescription="Company Logo"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/companyiconlogofinal" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/companyHeader"
+        android:layout_margin="5dp"
+        android:background="@drawable/circular_search_bar"
+        android:backgroundTint="@color/lavenderblush"
+        android:drawableLeft="@drawable/searchiconglasslogo"
+        android:gravity="center"
+        android:hint="Search for Managers"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+    <GridLayout
+        android:id="@+id/landlordButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchBar"
+        android:layout_marginHorizontal="25dp"
+        android:columnCount="2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:rowCount="1">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/registerPropertyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_columnWeight="1"
+            android:layout_below="@+id/searchBar"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Register Property"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/showPropertyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_columnWeight="1"
+            android:layout_below="@+id/searchBar"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Show Properties"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </GridLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_container_landlord"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/buttonContainer"
+        android:layout_below="@+id/landlordButtonContainer"
+        android:layout_margin="5dp" />
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="0dp"
+        android:background="@color/lightgrey"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="2dp">
+        <LinearLayout
+            android:id="@+id/landlordHomeButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/lightgrey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+            <ImageView
+                android:id="@+id/landlordHomeButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:contentDescription="Search Managers"
+                android:scaleType="fitCenter"
+                android:src="@drawable/homeicon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Search"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/landlordHistoryButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/lightgrey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+            <ImageView
+                android:id="@+id/landlordManagePropButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:contentDescription="Manage Properties"
+                android:scaleType="fitCenter"
+                android:src="@drawable/historyicon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="History"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/landlordMessagesButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/lightgrey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+            <ImageView
+                android:id="@+id/landlordMessagesButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:contentDescription="Messages Requests"
+                android:scaleType="fitCenter"
+                android:src="@drawable/messageiconfinal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Messages"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/lightgrey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+            <ImageView
+                android:id="@+id/profileButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:contentDescription="Profile"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profile" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Landlord"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

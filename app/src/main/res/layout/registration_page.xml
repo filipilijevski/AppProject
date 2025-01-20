@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightcyan">
+    <LinearLayout
+        android:id="@+id/companyHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="1dp">
+        <ImageView
+            android:id="@+id/companyLogo"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="0dp"
+            android:contentDescription="Company Logo"
+            android:scaleType="fitXY"
+            android:src="@drawable/companyiconlogofinal" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/registrationText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/companyHeader"
+        android:layout_marginHorizontal="55dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/circular_border"
+        android:backgroundTint="@color/dodgerblue"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Register Today!"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/roleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registrationText"
+        android:layout_marginHorizontal="55dp"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="Choose Role"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:id="@+id/roleButtons"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/roleText"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="3dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/landlordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/dodgerblue"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Landlord"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/clientButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/dodgerblue"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Client"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/managerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/dodgerblue"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Manager"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

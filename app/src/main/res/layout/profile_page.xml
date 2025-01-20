@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgrey">
+    <LinearLayout
+        android:id="@+id/companyHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/lightgrey"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="1dp">
+        <ImageView
+            android:id="@+id/companyLogo"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="0dp"
+            android:background="@color/lightgrey"
+            android:contentDescription="Company Logo"
+            android:scaleType="fitXY"
+            android:src="@drawable/companyiconlogofinal" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/profileText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/companyHeader"
+        android:layout_margin="5dp"
+        android:background="@color/lightgrey"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Profile Settings"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:id="@+id/userProfileSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileText"
+        android:background="@color/lightgrey"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="0dp">
+        <ImageView
+            android:id="@+id/userProfilePicture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circular_border"
+            android:contentDescription="User Profile Picture"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_profile_picture" />
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="User Name"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <GridLayout
+        android:id="@+id/settingsButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userProfileSection"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="4dp"
+        android:columnCount="1"
+        android:padding="8dp"
+        android:rowCount="5">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/personalInfoButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Personal Info"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginSecurityButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Login and Security"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/howDoWeWorkButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="How Rentron works"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/feedbackButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Leave a Review!"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/reportProblemButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Report a concern"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logoutButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Logout"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </GridLayout>
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="0dp"
+        android:background="@color/lightgrey"
+        android:orientation="horizontal"
+        android:padding="2dp">
+        <LinearLayout
+            android:id="@+id/homeButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/lightgrey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+            <ImageView
+                android:id="@+id/homeButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:contentDescription="Search Homes"
+                android:scaleType="fitCenter"
+                android:src="@drawable/homeicon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Search"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/historyButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/lightgrey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+            <ImageView
+                android:id="@+id/historyButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:contentDescription="Property History"
+                android:scaleType="fitCenter"
+                android:src="@drawable/historyicon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="History"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/messagesButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/lightgrey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+            <ImageView
+                android:id="@+id/messagesButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:contentDescription="Messages Requests"
+                android:scaleType="fitCenter"
+                android:src="@drawable/messageiconfinal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Messages"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/profileButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/lightgrey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="0dp">
+            <ImageView
+                android:id="@+id/profileButton"
+                android:layout_width="48dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:contentDescription="Profile"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profile" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Profile"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

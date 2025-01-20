@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14">
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="34" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Use a valid hex version for OpenGL ES 2.0 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <queries>
+        <package android:name="com.google.android.apps.maps"/>
+    </queries>
+
+    <permission
+        android:name="com.example.rentalappcv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission
+        android:name="com.example.rentalappcv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+        android:label="RhOz"
+        android:icon="@drawable/companyiconlogofinal"
+        android:debuggable="true"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        tools:ignore="HardcodedDebugMode">
+
+        <activity
+            android:name="com.example.rentalappcv.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+            <!-- Other activities all exported for your usage -->
+        <activity android:name="com.example.rentalappcv.ManagerHomepageActivity" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.LandlordHomepageActivity" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.ClientHomepageActivity" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.ManagerRegistration" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.ClientRegistration" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.PropertyRegistration" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.LandlordRegistration" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.EditPropertyActivity" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.ProfilePageActivity" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.SearchResultsActivity" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.PropertyDetailsActivity" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.LandlordRequestsPageActivity" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.TicketsMessagesActivity" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.ClientHistoryActivity" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.RegistrationActivity" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.ManagerHistoryActivity" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.ManagerMessagesRequestsActivity" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.FullManagerInformation" android:exported="true" />
+        <activity android:name="com.example.rentalappcv.ClientRatingManagerActivity" android:exported="true" />
+
+        <!-- Your Google Maps API key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="000000000000000000000000000000000000000" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:theme"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:exported="false"
+            android:authorities="com.example.rentalappcv.com.squareup.picasso" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.example.rentalappcv.androidx-startup">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup" />
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup" />
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup" />
+        </provider>
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

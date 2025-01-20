@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Base.Theme.RentalAppCV" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.RentalAppCV" parent="Base.Theme.RentalAppCV" />
+
+    <!--
+         New style for a Translucent No Title Bar theme.
+         If you need to reference @style/Theme.Translucent.NoTitleBar
+         in your manifest for something like com.google.android.gms.common.api.GoogleApiActivity,
+         this style will resolve that reference.
+    -->
+    <style name="Theme.Translucent.NoTitleBar" parent="@android:style/Theme.Translucent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+
+        <!-- Optionally make the status bar or nav bar translucent, etc. -->
+        <!-- <item name="android:statusBarColor">@android:color/transparent</item> -->
+    </style>
+
+</resources>

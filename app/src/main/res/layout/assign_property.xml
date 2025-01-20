@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/circular_border"
+    android:backgroundTint="@color/lavenderblush"
+    android:orientation="horizontal"
+    android:padding="8dp">
+    <ImageView
+        android:id="@+id/managerImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="12dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/homeicon" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/numberOfBedroomsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of Bedrooms"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/numberOfBathroomsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of Bathrooms"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/assignManagerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_columnWeight="1"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/tan"
+        android:padding="5dp"
+        android:text="Assign"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+</LinearLayout>

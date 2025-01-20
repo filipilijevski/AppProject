@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgrey">
+    <LinearLayout
+        android:id="@+id/companyHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/lightgrey"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="1dp">
+        <ImageView
+            android:id="@+id/companyLogo"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:background="@color/lightgrey"
+            android:contentDescription="Company Logo"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/companyiconlogofinal" />
+    </LinearLayout>
+    <GridLayout
+        android:id="@+id/landlordRequestsButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/companyHeader"
+        android:layout_marginHorizontal="25dp"
+        android:columnCount="2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:rowCount="1">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/landlordActiveRequestsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Active Requests"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/landlordRejectedRequestsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/lavenderblush"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Rejected Requests"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </GridLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_container_landlord"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/landlordButtonContainer"
+        android:layout_below="@+id/landlordRequestsButtonContainer"
+        android:layout_margin="5dp" />
+    <LinearLayout
+        android:id="@+id/landlordButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="0dp"
+        android:background="@color/lightgrey"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="2dp">
+        <LinearLayout
+            android:id="@+id/landlordHomeButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/lightgrey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+            <ImageView
+                android:id="@+id/landlordHomeButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:contentDescription="Search"
+                android:scaleType="fitCenter"
+                android:src="@drawable/homeicon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Search"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/landlordHistoryButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/lightgrey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+            <ImageView
+                android:id="@+id/landlordHistoryButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/historyicon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="History"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/landlordMessagesButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/lightgrey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+            <ImageView
+                android:id="@+id/landlordMessagesButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:contentDescription="Messages Requests"
+                android:scaleType="fitCenter"
+                android:src="@drawable/messageiconfinal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Messages"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/landlordProfileButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/lightgrey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+            <ImageView
+                android:id="@+id/profileButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:contentDescription="Profile"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profile" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Landlord"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
